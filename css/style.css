@@ -1,6 +1,6 @@
 .buttons button {
   background-color: transparent;
-  color: #ddbdd5;
+  color: #fd8680;
   transition: all 0.25s ease-in;
 }
 .buttons button:hover {
@@ -75,7 +75,7 @@ main h1 {
   font-size: 1rem;
 }
 .wrapper input:focus, .wrapper input:active {
-  border: 4px solid #ddbdd5;
+  border: 4px solid #fd8680;
   outline: none;
   transform: scale(1.01);
 }
