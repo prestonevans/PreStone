@@ -32,6 +32,7 @@ main h1 {
 
 .buttons {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 .buttons button {
   font-size: 3rem;
