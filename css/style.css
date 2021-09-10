@@ -45,10 +45,9 @@ main h1 {
   justify-content: center;
   width: 90%;
 }
-
-.form {
+.wrapper .form {
   flex-basis: 100%;
-  background-color: #f7ebec;
+  background-color: rgba(247, 235, 236, 0.3);
   height: 60vh;
   max-width: 600px;
   border-radius: 20px;
