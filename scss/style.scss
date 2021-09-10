@@ -54,8 +54,9 @@ main {
 	}
 }
 .form {
+	align-self: stretch;
 	background-color: $primary;
 	height: 60vh;
-	width: 45%;
+	max-width: 1000px;
 	border-radius: $borderRad;
 }

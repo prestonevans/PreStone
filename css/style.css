@@ -41,9 +41,10 @@ main h1 {
 }
 
 .form {
+  align-self: stretch;
   background-color: #f7ebec;
   height: 60vh;
-  width: 45%;
+  max-width: 1000px;
   border-radius: 20px;
 }
 
