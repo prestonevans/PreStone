@@ -46,10 +46,10 @@ main h1 {
   width: 90%;
 }
 .wrapper .form {
+  font-size: 2rem;
   padding: 20px;
   flex-basis: 100%;
   background-color: rgba(247, 235, 236, 0.3);
-  height: 60vh;
   max-width: 600px;
   border-radius: 20px;
 }

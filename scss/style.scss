@@ -1,20 +1,20 @@
 $primary: rgba(247, 235, 236, 1);
 $secondary: rgba(221, 189, 213, 1);
 $third: rgba(172, 159, 187, 1);
-
 $primary-transparent: rgba(247, 235, 236, .3);
 
 $font-color: #1d1e2c;
 
-$font-sm: 1rem;
+$font-sm: 2rem;
 $font-md: 3rem;
 $font-lg: 4rem;
 
 $trans: all .25s ease-in;
 $borderRad: 20px;
 
-$marginbot-md: .5rem;
-$marginbot-lg: 1.5rem;
+$margin-sm: .25rem;
+$margin-md: .5rem;
+$margin-lg: 1.5rem;
 
 $pad: 20px;
 
@@ -46,11 +46,11 @@ main {
 		text-align: center;
 		color: $primary;
 		font-size: $font-lg;
-		margin-bottom: $marginbot-md;
+		margin-bottom: $margin-md;
 	}
 }
 .buttons {
-	margin-bottom: $marginbot-lg;
+	margin-bottom: $margin-lg;
 	button {
 		@extend %btn;
 		font-size: $font-md;
@@ -64,10 +64,10 @@ main {
 	justify-content: center;
 	width: 90%;
 	.form {
+		font-size: $font-sm;
 		padding: $pad;
 		flex-basis: 100%;
 		background-color: $primary-transparent;
-		height: 60vh;
 		max-width: 600px;
 		border-radius: $borderRad;
 	}
