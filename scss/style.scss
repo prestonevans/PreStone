@@ -1,11 +1,35 @@
-$primary: rgba(255, 255, 255, 1);
+$primary: #f7ebec;
+$secondary: #ddbdd5;
+$third: #ac9fbb;
+
+$font-color: #1d1e2c;
+
+$font-sm: 1rem;
+$font-md: 3rem;
+$font-lg: 4rem;
+
+$trans: all .25s ease-in;
+$borderRad: 20px;
+
+$marginbot: .5rem;
+%btn {
+	background-color: transparent;
+	color: $secondary;
+	transition: $trans;
+
+	&:hover {
+		color: $third;
+		cursor: pointer;
+	}
+}
+
 * {
 	border: 0;
 	padding: 0;
 	margin: 0;
 }
 main {
-	height: 100vh;
+	min-height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -13,6 +37,25 @@ main {
 	justify-content: center;
 	align-items: center;
 	h1 {
+		text-align: center;
 		color: $primary;
+		font-size: $font-lg;
+		margin-bottom: $marginbot;
 	}
+}
+.buttons {
+	margin-bottom: $marginbot;
+	button {
+		@extend %btn;
+		font-size: $font-md;
+		&:not(:last-child) {
+			margin-right: .25em;
+		}
+	}
+}
+.form {
+	background-color: $primary;
+	height: 60vh;
+	width: 45%;
+	border-radius: $borderRad;
 }

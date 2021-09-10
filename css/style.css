@@ -1,3 +1,13 @@
+.buttons button {
+  background-color: transparent;
+  color: #ddbdd5;
+  transition: all 0.25s ease-in;
+}
+.buttons button:hover {
+  color: #ac9fbb;
+  cursor: pointer;
+}
+
 * {
   border: 0;
   padding: 0;
@@ -5,7 +15,7 @@
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -14,7 +24,27 @@ main {
   align-items: center;
 }
 main h1 {
-  color: white;
+  text-align: center;
+  color: #f7ebec;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  margin-bottom: 0.5rem;
+}
+.buttons button {
+  font-size: 3rem;
+}
+.buttons button:not(:last-child) {
+  margin-right: 0.25em;
+}
+
+.form {
+  background-color: #f7ebec;
+  height: 60vh;
+  width: 45%;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
