@@ -26,6 +26,8 @@ main {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 67% 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,6 +54,7 @@ main h1 {
   display: flex;
   justify-content: center;
   width: 90%;
+  margin-bottom: 1.5rem;
 }
 .wrapper .form {
   display: flex;
