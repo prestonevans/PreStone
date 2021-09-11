@@ -1,17 +1,25 @@
-.buttons button {
-  background-color: transparent;
-  color: #fd8680;
-  transition: all 0.25s ease-in;
-}
-.buttons button:hover {
-  color: #ac9fbb;
-  cursor: pointer;
-}
-
 * {
   border: 0;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.buttons button {
+  background-color: transparent;
+  color: #fd8680;
+  transition: all 0.25s ease-in;
+  border: 2px solid #fd8680;
+  border-radius: 20px;
+  padding: 0.125em 0.25em;
+  margin-bottom: 1.5rem;
+}
+.buttons button:hover, .buttons button:focus {
+  outline: none;
+  color: #ac9fbb;
+  border-color: #ac9fbb;
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 main {
@@ -31,7 +39,6 @@ main h1 {
 }
 
 .buttons {
-  margin-bottom: 1.5rem;
   text-align: center;
 }
 .buttons button {
@@ -69,6 +76,7 @@ main h1 {
   margin-bottom: 0.5rem;
   background-color: #f7ebec;
   transition: all 0.25s ease-in;
+  min-width: 200px;
 }
 .wrapper input::placeholder {
   color: #1d1e2c;
