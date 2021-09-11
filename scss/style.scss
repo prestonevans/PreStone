@@ -1,6 +1,7 @@
 $primary: rgba(247, 235, 236, 1);
 $secondary: rgb(253 134 128);
 $third: rgba(172, 159, 187, 1);
+$forth: rgba(164, 206, 208, 0.397);
 $primary-transparent: rgba(247, 235, 236, .3);
 
 $font-color: #1d1e2c;
@@ -42,7 +43,35 @@ $pad: 20px;
 		transform: scale(1.05);
 	}
 }
-
+%inpt {
+	line-height: 2em;
+	padding: $margin-md;
+	border-radius: $borderRad;
+	width: 60%;
+	margin-bottom: $margin-md;
+	background-color: $primary;
+	font-size: 1rem;
+	color: $secondary;
+	transition: $trans;
+	min-width: 200px;
+	&::placeholder {
+		color: $secondary;
+		font-size: 1rem;
+	}
+	&::selection {
+		background-color: $forth;
+	}
+	&:focus,
+	&:active {
+		border: 4px solid $secondary;
+		outline: none;
+		transform: scale(1.01);
+		color: $third;
+		&::placeholder {
+			color: $third;
+		}
+	}
+}
 main {
 	min-height: 100vh;
 	background-size: cover;
@@ -91,23 +120,6 @@ main {
 		margin-bottom: $margin-md;
 	}
 	input {
-		line-height: 2em;
-		padding: $margin-md;
-		border-radius: $borderRad;
-		width: 60%;
-		margin-bottom: $margin-md;
-		background-color: $primary;
-		transition: $trans;
-		min-width: 200px;
-		&::placeholder {
-			color: $font-color;
-			font-size: 1rem;
-		}
-		&:focus,
-		&:active {
-			border: 4px solid $secondary;
-			outline: none;
-			transform: scale(1.01);
-		}
+		@extend %inpt;
 	}
 }
