@@ -1,32 +1,62 @@
-.buttons button {
-  background-color: transparent;
-  color: #fd8680;
-  transition: all 0.25s ease-in;
-}
-.buttons button:hover {
-  color: #ac9fbb;
-  cursor: pointer;
-}
-
 * {
   border: 0;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: #f7ebec;
+.buttons button {
+  background-color: transparent;
+  color: #fd8680;
+  transition: all 0.25s ease-in;
+  border: 2px solid #fd8680;
+  border-radius: 20px;
+  padding: 0.125em 0.25em;
+  margin-bottom: 1.5rem;
+}
+.buttons button:hover, .buttons button:focus {
+  outline: none;
+  color: #ac9fbb;
+  border-color: #ac9fbb;
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
-a {
-  color: #f7ebec;
-  text-decoration: none;
+.wrapper input {
+  line-height: 2em;
+  padding: 0.5rem;
+  border-radius: 20px;
+  width: 60%;
+  margin-bottom: 0.5rem;
+  background-color: #f7ebec;
+  font-size: 1rem;
+  color: #fd8680;
+  transition: all 0.25s ease-in;
+  min-width: 200px;
+}
+.wrapper input::placeholder {
+  color: #fd8680;
+  font-size: 1rem;
+}
+.wrapper input::selection {
+  background-color: rgba(164, 206, 208, 0.397);
+}
+.wrapper input:focus, .wrapper input:active {
+  border: 4px solid #fd8680;
+  outline: none;
+  transform: scale(1.01);
+  color: #ac9fbb;
+}
+.wrapper input:focus::placeholder, .wrapper input:active::placeholder {
+  color: #ac9fbb;
 }
 
 main {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 67% 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,12 +64,12 @@ main {
 }
 main h1 {
   text-align: center;
+  color: #f7ebec;
   font-size: 4rem;
   margin-bottom: 0.5rem;
 }
 
 .buttons {
-  margin-bottom: 1.5rem;
   text-align: center;
 }
 .buttons button {
@@ -53,6 +83,7 @@ main h1 {
   display: flex;
   justify-content: center;
   width: 90%;
+  margin-bottom: 1.5rem;
 }
 .wrapper .form {
   display: flex;
@@ -68,89 +99,6 @@ main h1 {
 .wrapper label {
   color: #f7ebec;
   margin-bottom: 0.5rem;
-}
-.wrapper input {
-  line-height: 2em;
-  padding: 0.5rem;
-  border-radius: 20px;
-  width: 60%;
-  margin-bottom: 0.5rem;
-  background-color: #f7ebec;
-  transition: all 0.25s ease-in;
-}
-.wrapper input::placeholder {
-  color: #1d1e2c;
-  font-size: 1rem;
-}
-.wrapper input:focus, .wrapper input:active {
-  border: 4px solid #fd8680;
-  outline: none;
-  transform: scale(1.01);
-}
-
-.topNavBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000000;
-  padding: 8px 20px;
-}
-.topNavBar ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-.topNavBar ul li {
-  margin: 0.5rem;
-  font-size: 2rem;
-}
-
-.divCon {
-  min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.sideNav {
-  background-color: #000000;
-  width: 15vw;
-  min-height: 100vh;
-  padding: 20px;
-}
-.sideNav ul {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
-}
-.sideNav ul li {
-  color: #fd8680;
-  list-style: none;
-  font-size: 1.7rem;
-  transition: all 0.25s ease-in;
-}
-.bodyCon {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: space-between;
-}
-.bodyCon .wrapper {
-  margin: 1.5rem;
-}
-.bodyCon p {
-  color: #f7ebec;
-}
-.bodyCon .form {
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

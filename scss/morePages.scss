@@ -1,0 +1,173 @@
+@import 'globalVars.scss';
+
+
+
+
+%btn {
+	background-color: transparent;
+	color: $secondary;
+	transition: $trans;
+
+	&:hover {
+		color: $third;
+		cursor: pointer;
+	}
+}
+
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+h1{
+	color: $primary;
+}
+a{
+	color: $primary;
+	text-decoration: none;
+}
+main {
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include flexMan(column, center, center);
+
+	h1 {
+		text-align: center;
+		
+		font-size: $font-lg;
+		margin-bottom: $margin-md;
+	}
+}
+.buttons {
+	margin-bottom: $margin-lg;
+	text-align: center;
+	button {
+		@extend %btn;
+		font-size: $font-md;
+		&:not(:last-child) {
+			margin-right: .25em;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 90%;
+	.form {
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: $font-sm;
+		padding: $pad;
+		flex-basis: 100%;
+		background-color: $primary-transparent;
+		max-width: 600px;
+		border-radius: $borderRad;
+		margin: 1rem;
+	}
+	label {
+		color: $primary;
+		margin-bottom: $margin-md;
+	}
+	input {
+		line-height: 2em;
+		padding: $margin-md;
+		border-radius: $borderRad;
+		width: 60%;
+		margin-bottom: $margin-md;
+		background-color: $primary;
+		transition: $trans;
+		&::placeholder {
+			color: $font-color;
+			font-size: 1rem;
+		}
+		&:focus,
+		&:active {
+			border: 4px solid $secondary;
+			outline: none;
+			transform: scale(1.01);
+		}
+	}
+}
+
+
+//Stones area to add second page
+
+
+
+html{
+	font-family: $fontFam;
+}
+
+.topNavBar{
+	@include flexMan(row, space-between, center);
+ 
+	background-color: #000000;
+	padding: 8px $pad;
+  ul{
+		@include flexMan(row, space-between, center);
+	
+		list-style: none;
+		li{
+			margin: $margin-md;
+			font-size: $font-sm - .3rem;
+		}
+	}
+}
+.divCon{
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.sideNav{
+	
+	background-color: #000000;
+	min-height: 100vh;
+	padding: $pad;
+	ul{
+		min-height: 100%;
+		 @include flexMan(column, flex-start, flex-start);
+		li{
+			color: $secondary;
+			list-style: none;
+			font-size: $font-sm - .3rem;
+			transition: $trans;
+			margin: $margin-lg - .3rem;
+		}
+
+		
+	}
+}
+a:hover{
+	color: $third;
+	transition: all .3s;
+}
+.bodyCon{
+	@include flexMan(row, space-between, space-between);
+	.wrapper{
+		margin: $margin-lg;
+	}
+	p{
+		color: $primary;
+	}
+	.form{
+		
+		@include flexMan(column, center, center);
+	
+		
+	}
+}
+.mainSignArea{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.subBut{
+	color: $primary;
+	cursor: pointer;
+	@extend %btn;
+}
