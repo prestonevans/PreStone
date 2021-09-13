@@ -1,8 +1,5 @@
 @import 'globalVars.scss';
 
-
-
-
 %btn {
 	background-color: transparent;
 	color: $secondary;
@@ -13,16 +10,44 @@
 		cursor: pointer;
 	}
 }
-
+%inpt {
+	line-height: 2em;
+	padding: $margin-md;
+	border-radius: $borderRad;
+	width: 60%;
+	margin-bottom: $margin-lg;
+	background-color: $primary;
+	font-size: 1rem;
+	color: $secondary;
+	transition: $trans;
+	min-width: 200px;
+	&::placeholder {
+		color: $secondary;
+		font-size: 1rem;
+	}
+	&::selection {
+		background-color: $forth;
+	}
+	&:focus,
+	&:active {
+		border: 4px solid $secondary;
+		outline: none;
+		transform: scale(1.01);
+		color: $third;
+		&::placeholder {
+			color: lighten($third, 15%);
+		}
+	}
+}
 * {
 	border: 0;
 	padding: 0;
 	margin: 0;
 }
-h1{
+h1 {
 	color: $primary;
 }
-a{
+a {
 	color: $primary;
 	text-decoration: none;
 }
@@ -34,11 +59,12 @@ main {
 
 	h1 {
 		text-align: center;
-		
+
 		font-size: $font-lg;
 		margin-bottom: $margin-md;
 	}
 }
+
 .buttons {
 	margin-bottom: $margin-lg;
 	text-align: center;
@@ -70,104 +96,86 @@ main {
 		margin: 1rem;
 	}
 	label {
-		color: $primary;
+		color: lighten($primary, 5%);
 		margin-bottom: $margin-md;
 	}
 	input {
-		line-height: 2em;
-		padding: $margin-md;
-		border-radius: $borderRad;
-		width: 60%;
-		margin-bottom: $margin-md;
-		background-color: $primary;
-		transition: $trans;
-		&::placeholder {
-			color: $font-color;
-			font-size: 1rem;
-		}
-		&:focus,
-		&:active {
-			border: 4px solid $secondary;
-			outline: none;
-			transform: scale(1.01);
-		}
+		@extend %inpt;
 	}
 }
 
-
 //Stones area to add second page
 
-
-
-html{
+html {
 	font-family: $fontFam;
 }
 
-.topNavBar{
+.topNavBar {
 	@include flexMan(row, space-between, center);
- 
-	background-color: #000000;
+
+	background-color: transparent;
 	padding: 8px $pad;
-  ul{
+	ul {
 		@include flexMan(row, space-between, center);
-	
+
 		list-style: none;
-		li{
+		li {
 			margin: $margin-md;
 			font-size: $font-sm - .3rem;
 		}
 	}
 }
-.divCon{
+.divCon {
 	min-height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.sideNav{
-	
+.sideNav {
 	background-color: #000000;
 	min-height: 100vh;
 	padding: $pad;
-	ul{
+	ul {
 		min-height: 100%;
-		 @include flexMan(column, flex-start, flex-start);
-		li{
+		@include flexMan(column, flex-start, flex-start);
+		li {
 			color: $secondary;
 			list-style: none;
 			font-size: $font-sm - .3rem;
 			transition: $trans;
 			margin: $margin-lg - .3rem;
 		}
-
-		
 	}
 }
-a:hover{
+a:hover {
 	color: $third;
 	transition: all .3s;
 }
-.bodyCon{
+.bodyCon {
 	@include flexMan(row, space-between, space-between);
-	.wrapper{
+	.wrapper {
 		margin: $margin-lg;
 	}
-	p{
-		color: $primary;
+	p {
+		color: lighten($primary, 5%);
 	}
-	.form{
-		
+	.form {
 		@include flexMan(column, center, center);
-	
-		
 	}
 }
-.mainSignArea{
+.mainSignArea {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.subBut{
-	color: $primary;
+.subBut {
+	color: lighten($primary, 5%);
 	cursor: pointer;
 	@extend %btn;
+}
+a {
+	&:focus,
+	&:hover {
+		outline: none;
+		color: $third;
+	}
 }
