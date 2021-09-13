@@ -45,6 +45,7 @@
 
 h1 {
   color: #f7ebec;
+  text-align: center;
 }
 
 a {
@@ -187,6 +188,20 @@ a:hover {
 a:focus, a:hover {
   outline: none;
   color: #ac9fbb;
+}
+
+@media screen and (max-width: 900px) {
+  .topNavBar {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .topNavBar ul {
+    flex-direction: column;
+  }
+  .topNavBar ul li {
+    border-bottom: 1px solid #f7ebec;
+  }
 }
 
 /*# sourceMappingURL=morePages.css.map */

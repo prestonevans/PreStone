@@ -46,6 +46,7 @@
 }
 h1 {
 	color: $primary;
+	text-align: center;
 }
 a {
 	color: $primary;
@@ -175,5 +176,18 @@ a {
 	&:hover {
 		outline: none;
 		color: $third;
+	}
+}
+@media screen and(max-width: 900px) {
+	.topNavBar {
+		flex-direction: column;
+	}
+}
+@media screen and(max-width: 500px) {
+	.topNavBar ul {
+		flex-direction: column;
+		li {
+			border-bottom: 1px solid $primary;
+		}
 	}
 }
