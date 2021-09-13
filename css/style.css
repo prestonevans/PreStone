@@ -22,12 +22,26 @@
   transform: scale(1.05);
 }
 
+.wrapper a {
+  background-color: #fd8680;
+  color: #f7ebec;
+  transition: all 0.25s ease-in;
+  border-radius: 20px;
+  padding: 0.125em 0.25em;
+  margin-bottom: 1.5rem;
+}
+.wrapper a:hover, .wrapper a:focus {
+  outline: none;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 .wrapper input {
   line-height: 2em;
   padding: 0.5rem;
   border-radius: 20px;
   width: 60%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   background-color: #f7ebec;
   font-size: 1rem;
   color: #fd8680;
@@ -99,6 +113,10 @@ main h1 {
 .wrapper label {
   color: #f7ebec;
   margin-bottom: 0.5rem;
+}
+.wrapper a {
+  text-decoration: none;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

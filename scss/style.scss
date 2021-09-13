@@ -43,12 +43,26 @@ $pad: 20px;
 		transform: scale(1.05);
 	}
 }
+%btn2 {
+	background-color: $secondary;
+	color: $primary;
+	transition: $trans;
+	border-radius: $borderRad;
+	padding: .125em .25em;
+	margin-bottom: $margin-lg;
+	&:hover,
+	&:focus {
+		outline: none;
+		cursor: pointer;
+		transform: scale(1.05);
+	}
+}
 %inpt {
 	line-height: 2em;
 	padding: $margin-md;
 	border-radius: $borderRad;
 	width: 60%;
-	margin-bottom: $margin-md;
+	margin-bottom: $margin-lg;
 	background-color: $primary;
 	font-size: 1rem;
 	color: $secondary;
@@ -121,5 +135,10 @@ main {
 	}
 	input {
 		@extend %inpt;
+	}
+	a {
+		@extend %btn2;
+		text-decoration: none;
+		margin: 0;
 	}
 }
