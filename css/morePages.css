@@ -80,9 +80,7 @@ main h1 {
 
 .wrapper {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 90%;
+  flex-direction: column;
 }
 .wrapper .form {
   height: fit-content;
@@ -176,9 +174,9 @@ a:hover {
 }
 
 .mainSignArea {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .subBut {

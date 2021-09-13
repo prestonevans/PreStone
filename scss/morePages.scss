@@ -79,9 +79,7 @@ main {
 
 .wrapper {
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	width: 90%;
+	flex-direction: column;
 	.form {
 		height: fit-content;
 		display: flex;
@@ -163,9 +161,9 @@ a:hover {
 	}
 }
 .mainSignArea {
+	width: 100%;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	justify-content: center;
 }
 .subBut {
 	color: lighten($primary, 5%);
