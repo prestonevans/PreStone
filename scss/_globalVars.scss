@@ -1,0 +1,41 @@
+$primary: rgba(247, 235, 236, 1);
+$secondary: rgb(253 134 128);
+$third: rgba(172, 159, 187, 1);;
+$primary-transparent: rgba(247, 235, 236, .3);
+
+$font-color: #1d1e2c;
+
+
+$font-sm: 2rem;
+$font-md: 3rem;
+$font-lg: 4rem;
+$letterSpacing: 1rem;
+
+
+$trans: all .25s ease-in;
+$borderRad: 20px;
+
+$marginbot: .5rem; 
+// spaccccceeeee
+
+$margin-sm: .25rem;
+$margin-md: .5rem;
+$margin-lg: 1.5rem;
+
+$pad: 20px;
+
+
+%flexyBoi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexMan($d:row, $j:space-between, $a:center){
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+}
+
+
+
