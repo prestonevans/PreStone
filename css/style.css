@@ -48,7 +48,7 @@
   color: #ac9fbb;
 }
 .wrapper input:focus::placeholder, .wrapper input:active::placeholder {
-  color: #ac9fbb;
+  color: #d3ccdb;
 }
 
 main {

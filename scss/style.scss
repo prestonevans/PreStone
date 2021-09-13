@@ -68,7 +68,7 @@ $pad: 20px;
 		transform: scale(1.01);
 		color: $third;
 		&::placeholder {
-			color: $third;
+			color: lighten($third, 15%);
 		}
 	}
 }
@@ -111,7 +111,7 @@ main {
 		font-size: $font-sm;
 		padding: $pad;
 		flex-basis: 100%;
-		background-color: $primary-transparent;
+		background-color: fade_out($primary, .7);
 		max-width: 600px;
 		border-radius: $borderRad;
 	}
