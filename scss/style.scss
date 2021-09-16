@@ -3,14 +3,11 @@ $secondary: rgb(253 134 128);
 $third: rgba(172, 159, 187, 1);
 $primary-transparent: rgba(247, 235, 236, .3);
 
-$font-color: #1d1e2c;
 
 $font-sm: 2rem;
 $font-md: 3rem;
 $font-lg: 4rem;
 
-$trans: all .25s ease-in;
-$borderRad: 20px;
 
 $margin-sm: .25rem;
 $margin-md: .5rem;
@@ -22,22 +19,54 @@ $pad: 20px;
 	background-color: transparent;
 	color: $secondary;
 	transition: $trans;
-
-	&:hover {
+	border: 2px solid $secondary;
+	border-radius: $borderRad;
+	padding: .125em .25em;
+	margin-bottom: $margin-lg;
+	&:hover,
+	&:focus {
+		outline: none;
 		color: $third;
+		border-color: $third;
 		cursor: pointer;
+		transform: scale(1.05);
 	}
 }
-
-* {
-	border: 0;
-	padding: 0;
-	margin: 0;
+%inpt {
+	line-height: 2em;
+	padding: $margin-md;
+	border-radius: $borderRad;
+	width: 60%;
+	margin-bottom: $margin-md;
+	background-color: $primary;
+	font-size: 1rem;
+	color: $secondary;
+	transition: $trans;
+	min-width: 200px;
+	&::placeholder {
+		color: $secondary;
+		font-size: 1rem;
+	}
+	&::selection {
+		background-color: $forth;
+	}
+	&:focus,
+	&:active {
+		border: 4px solid $secondary;
+		outline: none;
+		transform: scale(1.01);
+		color: $third;
+		&::placeholder {
+			color: $third;
+		}
+	}
 }
 main {
 	min-height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 67% 20%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -80,6 +109,7 @@ main {
 		margin-bottom: $margin-md;
 	}
 	input {
+
 		line-height: 2em;
 		padding: $margin-md;
 		border-radius: $borderRad;
@@ -99,3 +129,16 @@ main {
 		}
 	}
 }
+// @keyframes fontBigger {
+// 	0% {font-size: $font-sm;}
+// 	100% {font-size: $font-sm + .5rem; } 
+// }
+
+
+
+
+
+
+
+
+
