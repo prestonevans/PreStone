@@ -70,6 +70,10 @@ main h1 {
 }
 
 .buttons {
+<<<<<<< HEAD
+=======
+  margin-bottom: 1.5rem;
+>>>>>>> 4f27b0f143eccb0bc3eeaff288c05f83987454b4
   text-align: center;
 }
 .buttons button {
@@ -83,7 +87,10 @@ main h1 {
   display: flex;
   justify-content: center;
   width: 90%;
+<<<<<<< HEAD
   margin-bottom: 1.5rem;
+=======
+>>>>>>> 4f27b0f143eccb0bc3eeaff288c05f83987454b4
 }
 .wrapper .form {
   display: flex;
@@ -100,5 +107,26 @@ main h1 {
   color: #f7ebec;
   margin-bottom: 0.5rem;
 }
+<<<<<<< HEAD
+=======
+.wrapper input {
+  line-height: 2em;
+  padding: 0.5rem;
+  border-radius: 20px;
+  width: 60%;
+  margin-bottom: 0.5rem;
+  background-color: #f7ebec;
+  transition: all 0.25s ease-in;
+}
+.wrapper input::placeholder {
+  color: #1d1e2c;
+  font-size: 1rem;
+}
+.wrapper input:focus, .wrapper input:active {
+  border: 4px solid #fd8680;
+  outline: none;
+  transform: scale(1.01);
+}
+>>>>>>> 4f27b0f143eccb0bc3eeaff288c05f83987454b4
 
 /*# sourceMappingURL=style.css.map */

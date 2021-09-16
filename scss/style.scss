@@ -1,14 +1,19 @@
-@import 'globalVars.scss';
+$primary: rgba(247, 235, 236, 1);
+$secondary: rgb(253 134 128);
+$third: rgba(172, 159, 187, 1);
+$primary-transparent: rgba(247, 235, 236, .3);
 
 
+$font-sm: 2rem;
+$font-md: 3rem;
+$font-lg: 4rem;
 
 
-* {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+$margin-sm: .25rem;
+$margin-md: .5rem;
+$margin-lg: 1.5rem;
+
+$pad: 20px;
 
 %btn {
 	background-color: transparent;
@@ -74,6 +79,7 @@ main {
 	}
 }
 .buttons {
+	margin-bottom: $margin-lg;
 	text-align: center;
 	button {
 		@extend %btn;
@@ -87,7 +93,6 @@ main {
 	display: flex;
 	justify-content: center;
 	width: 90%;
-	margin-bottom: $margin-lg;
 	.form {
 		display: flex;
 		flex-direction: column;
@@ -104,7 +109,24 @@ main {
 		margin-bottom: $margin-md;
 	}
 	input {
-		@extend %inpt;
+
+		line-height: 2em;
+		padding: $margin-md;
+		border-radius: $borderRad;
+		width: 60%;
+		margin-bottom: $margin-md;
+		background-color: $primary;
+		transition: $trans;
+		&::placeholder {
+			color: $font-color;
+			font-size: 1rem;
+		}
+		&:focus,
+		&:active {
+			border: 4px solid $secondary;
+			outline: none;
+			transform: scale(1.01);
+		}
 	}
 }
 // @keyframes fontBigger {
